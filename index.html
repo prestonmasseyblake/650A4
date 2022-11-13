@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+  
+        
+        <script>
+            //  you leave everything that in a that is not in b
+            // function for computing the problems   
+            function union(arr1, arr2) {
+                
+                let new_arr = []
+              
+                new_arr.push(...arr1)
+                new_arr.push(...arr2)
+                
+                new_set = new Set(new_arr);
+                new_arr = Array.from(new_set);  
+                return  new_arr;
+            }
+
+            function intersect(arr1, arr2) {
+                let new_arr = []
+                for(let i = 0; i < arr1.length; i++) {
+                    if(arr2.includes(arr1[i])){
+                        new_arr.push(arr1[i])
+                    }
+                }
+                let new_set = new Set(new_arr);
+                console.log(new_set);
+                new_arr = Array.from(new_set);
+                return new_arr;
+            }
+
+            function xor(arr1, arr2) {
+                let new_arr = []
+                for(let i = 0; i < arr1.length; i++){
+                    if(!arr2.includes(arr1[i])){
+                        new_arr.push(arr1[i])
+                    }
+                }
+                return new_arr;
+            }
+            //end of functions for computing 
+            L1 = ["0","11","20","000","101","0121"]
+            L2 = ["e","11","20","111","121"]
+            L3 = ["e","2","11","000","111","222"]
+
+            // a l1 U l2 intersect L 3
+            // let a = union(L1,L2)
+            // console.log(a)
+            // a = intersect(a,L3)
+            // console.log(a)
+
+            //b (L1 U L3)\(L1 U L2)
+            // let b_one = union(L1,L3)
+            // console.log(b_one)
+            // let b_two = union(L1,L2)
+            // console.log(b_two)
+            // let final = xor(b_one,b_two)
+            // console.log(final)
+
+            // c (L2 N L3)()
+
+
+
+
+
+        </script>
+    </body>
+</html>
